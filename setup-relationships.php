@@ -16,7 +16,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 add_shortcode( 'setup-relationships', 'setup_starter_relationships' );
 function setup_starter_relationships( $atts ) {
 	// $atts['foo'] -> get attribute contents
-
+	
     // do not run in WP-Admin
     if( is_admin() ) return;
 
