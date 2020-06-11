@@ -61,10 +61,13 @@ function setup_starter_relationships( $atts ) {
 			$relations = get_post_meta( get_the_ID(), 'related', TRUE );
 
 			// don't forget to declare the global variable which will be passed to the templates
-			foreach( $relations as $pid ) {
+			if ($relations) {
 
-				$out .= setup_starter_get_template( $template_dir, $template );
+				foreach( $relations as $pid ) {
 
+					$out .= setup_starter_get_template( $template_dir, $template );
+
+				}
 			}
 
 	    }
